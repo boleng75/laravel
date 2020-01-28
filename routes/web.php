@@ -117,4 +117,10 @@ Route::get("masuk/{nama?}/{bb?}/{umur?}",function($a = null, $b = null, $c = nul
         return $query;
         });
 
+        Route::get('tambah/{a?}/{b?}','LatihanController@tambah');
+        Route::get('kurang/{a?}/{b?}','LatihanController@kurang');
+        Route::get('kali/{a?}/{b?}','LatihanController@kali');
+        Route::get('bagi/{a?}/{b?}','LatihanController@bagi');
+        Route::get('/data-1','LatihanController@loop');
+
 ?>
