@@ -57,12 +57,64 @@ class LatihanController extends Controller
                 "<hr>";
             }
         }
-        public function gaji(){
+    }
+        public function gaji() {
             $data = [
                 ['Nama'=>'Agung','Agama'=>'Islam','Alamat'=>'kpbojong_tanjung','jenis_kelamin'=>'L','Jabatan'=>'Manager','jam_kerja'=>'12'],
-                ['Nama'=>'Anji','Agama'=>'Islam','Alamat'=>'dayeuhkolot','jenis_kelamin'=>'L','Jabatan'=>'Sekretaris','jam_kerja'=>'11'],
-                ['Nama'=>'Agung','Agama'=>'Islam','Alamat'=>'kpbojong_tanjung','jenis_kelamin'=>'L','Jabatan'=>'Staff','jam_kerja'=>'10']
+                ['Nama'=>'Anji','Agama'=>'Kristen','Alamat'=>'dayeuhkolot','jenis_kelamin'=>'L','Jabatan'=>'Sekretaris','jam_kerja'=>'11'],
+                ['Nama'=>'Agung','Agama'=>'Budha','Alamat'=>'kpbojong_tanjung','jenis_kelamin'=>'L','Jabatan'=>'Staff','jam_kerja'=>'10']
             ];
+            foreach($data as $key => $value){
+                if($value['jabatan'] == 'manajer'){
+                    $gaji = 5000000;
+                    if($value['jam_kerja'] >= 250){
+                        $gaji2 = (10/100)*$gaji;
+                        $bonus = $gaji + $gaji2;
+                    } if ($value['jam_kerja'] >= 200){
+                        $gaji2 = $gaji*0.05;
+                        $bonus = $gaji+$gaji2;
+                    }
+                    if($value['jabatan'] == 'Sekretaris'){
+                    $gaji = 5000000;
+                    if($value['jam_kerja'] >= 250){
+                        $gaji2 = (10/100)*$gaji;
+                        $bonus = $gaji + $gaji2;
+                    } if ($value['jam_kerja'] >= 200){
+                        $gaji2 = $gaji*0.05;
+                        $bonus = $gaji+$gaji2;
+                    }
+                    if($value['jabatan'] == 'Staff'){
+                    $gaji = 5000000;
+                    if($value['jam_kerja'] >= 250){
+                        $gaji2 = (10/100)*$gaji;
+                        $bonus = $gaji + $gaji2;
+                    } if ($value['jam_kerja'] >= 200){
+                        $gaji2 = $gaji*0.05;
+                        $bonus = $gaji+$gaji2;
+                    }
+
+
+                    else{
+                        echo"";
+                    }
+                    $PPN = $bonus*0.025;
+                    $total=$bonus - $PPN;
+
+
+                    echo "Nama              : ". $value['Nama'].
+                         "<br>Agama         : ". $value['Kelas'].
+                         "<br>Alamat        : ". $value['Alamat'].
+                         "<br>Jenis Kelamin : ". $value['jenis_kelamin'].
+                         "<br>Jabatan       : ". $value['Jabatan'].
+                         "<br>Jam Kerja     : ". $value['jam_kerja'].
+                         "<br>Gaji          : ". $gaji.
+                         "<br>bonus         : ". $gaji2.
+                         "<br>PPN           : ". $PPN.
+                         "<br>Total Gaji    : ". $total.
+                         "<hr>";
+                }
+            }
         }
     }
+}
 }

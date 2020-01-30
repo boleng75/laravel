@@ -122,5 +122,16 @@ Route::get("masuk/{nama?}/{bb?}/{umur?}",function($a = null, $b = null, $c = nul
         Route::get('kali/{a?}/{b?}','LatihanController@kali');
         Route::get('bagi/{a?}/{b?}','LatihanController@bagi');
         Route::get('/data-1','LatihanController@loop');
+        Route::get('/gaji','LatihanController@gaji');
+        Route::get('tabungan','tabunganfactory@index');
+        Route::get('tabungan','TabunganController@index');
+        Route::get('tabungan/(id)','TabunganController@show');
+        Route::get('tabungan-tambah/{nis?}/{nama?}/{kelas?}/{jml?}','TabunganController@store');
+        Route::get('tabungan-edit/{nis?}/{nama?}/{kelas?}/{jml?}','TabunganController@uptade');
+        Route::get('tabungan-delete/{id}','TabunganController@delete');
+        Route::get('customer-tambah/{code_customer?}/{name?}/{email?}/{country?}/{city?}/{address?}/{contact_number?}','TabunganController@store');
+        Route::get('pass','PracticeController@data');
+        Route::get('pass1','PracticeController@pass1');
+        Route::get('pass2','PracticeController@pass2');
 
 ?>
