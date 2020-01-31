@@ -7,7 +7,7 @@
     <title>Passing Controller Ke View</title>
 </head>
 <body>
-    <center>DAftar Siswa Abadi</center>
+    <center>Daftar Siswa Abadi</center>
     @foreach($data as $value)
         Nama : {{$value['nama']}}<br>
         Kelas : {{$value['kelas']}}

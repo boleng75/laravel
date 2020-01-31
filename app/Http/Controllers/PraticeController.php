@@ -20,9 +20,9 @@ class PraticeController extends Controller
         ];
         return view('latihan1',['data'=>$siswa]);
     }
-    public function pass2()
+    public function pass2($id)
     {
         $tabungan = tabungan::all()->take(10);
-        return view('latihan',compact('tabungan'));
+        return view('latihan3',compact('tabungan'));
     }
 }

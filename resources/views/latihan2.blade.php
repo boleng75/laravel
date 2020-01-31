@@ -9,8 +9,11 @@
 <body>
     <center>Daftar Tabungan</center>
     @@foreach ($tabungan as $data)
-        Nama : {{$data->nama}}<br>
+        Id : {{$data->id}}<br>
         Nis : {{$data->nis}}<br>
+        Nama : {{$data->nama}}<br>
+        Kelas : {{$data->kelas}}<br>
+        jml : {{$data->jml}}<br>
     @endforeach
 </body>
 </html>

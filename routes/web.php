@@ -130,8 +130,8 @@ Route::get("masuk/{nama?}/{bb?}/{umur?}",function($a = null, $b = null, $c = nul
         Route::get('tabungan-edit/{nis?}/{nama?}/{kelas?}/{jml?}','TabunganController@uptade');
         Route::get('tabungan-delete/{id}','TabunganController@delete');
         Route::get('customer-tambah/{code_customer?}/{name?}/{email?}/{country?}/{city?}/{address?}/{contact_number?}','TabunganController@store');
-        Route::get('pass','PracticeController@data');
-        Route::get('pass1','PracticeController@pass1');
-        Route::get('pass2','PracticeController@pass2');
+        Route::get('pass','PraticeController@data');
+        Route::get('pass1','PraticeController@pass1');
+        Route::get('pass2','PraticeController@lpass2');
 
 ?>
